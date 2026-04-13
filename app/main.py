@@ -36,7 +36,7 @@ class Distance:
             return NotImplemented
         if isinstance(other, (int, float)):
             return Distance(round(self.km / other, 2))
-        return None
+        return NotImplemented
 
     def __lt__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
